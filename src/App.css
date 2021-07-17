@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,0.23322832550989148) 0%, rgba(148,187,233,0.25843840954350494) 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Container {
+  margin: 50px;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Input-Container {
+  padding: 118px 71px;
+  background-image: url(https://image.shutterstock.com/z/stock-photo-to-do-list-in-spiral-notepad-trendy-pink-background-flat-lay-style-659808433.jpg);
+  color: rgb(0, 0, 0);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  width: '60px'
+}
+h1 {
+  font-size: 60px;
+  margin: 0;
+  text-align: center;
+  font-family: cursive;
+}
+
+.add-element {
+  display: block;
+  text-align:center;
+}
+
+#myInput {
+  padding: 13px 25px;
+  background-color: #363434b3;
+  border: none;
+  border-radius: 5px;
+  color: rgb(238 174 202);;
+  font-size: 18px;
+  width: 95%;
+}
+
+#myInput:focus {
+  outline: transparent;
+}
+
+::placeholder {
+  color: rgb(238 174 202);;
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+.add-Btn {
+  -webkit-appearance: none;
+  background: -webkit-gradient(to right, #eeaeca 0%, #94bbe9 50%, #fc466b 100%);
+  background: linear-gradient(to right, #eeaeca 0%, #94bbe9 50%, #fc466b 100%);
+  background-size: 500%;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color: #fff;
+  cursor: pointer;
+  font: 1.5em Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 5rem;
+  letter-spacing: 0.05em;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 10rem;
+  
+}
+.add-Btn:hover{
+  animation-name: gradient;
+  -webkit-animation-name: gradient;
+  animation-duration: 2s;
+  -webkit-animation-duration: s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+.add-Btn:focus {
+  outline: transparent;
+}
+
+h2 {
+  text-align: center;
+  color: #7c7c7c;
+  font-size: 35px;
+  font-weight: light;
+  padding: 50px 0;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  list-style: none;
+  color: #7c7c7c;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.Modal-Btn {
+  padding: 10px 25px;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  background-color: #4696e5;
   color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+  width: auto;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.Modal-Btn:focus {
+  outline: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#ModalInput {
+  padding: 10px 15px;
+  background-color: white;
+  border: 0.5px solid #cccbcb;
+  border-radius: 5px;
+  color: #4696e5;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+#ModalInput:focus {
+  outline: transparent;
+}
+
+#myUl {
+  margin-top: 100px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0;
+}
+.todo-li{
+justify-content: space-between ;
+}
+.complete-btn{
+  padding: 10px 25px;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  background-color: #94bbe9;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 15px;
+  width: auto;
+  opacity: 0.7;
+}
+.complete-btn:focus{
+  outline: 0;
+}
+.delete-btn{
+  padding: 10px 25px;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  background-color: #fc466b;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 15px;
+  width: auto;
+  opacity: 0.7;
+}
+.delete-btn:focus{
+  outline: 0;
+}
+.btn{
+ 
+  padding: 10px 25px;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  background-color: #eeaeca;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 15px;
+  width: auto;
+  opacity: 0.7;
+}
+.btn:focus {
+  outline: 0;
 }
